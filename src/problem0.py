@@ -310,6 +310,23 @@ def problem0c(circle, n, window):
     ####################################################################
     # ------------------------------------------------------------------
 
+    circle.attach_to(window)
+    center = circle.center
+    radius = circle.radius
+    center_x = center.x + (2 * radius)
+    center_y = center.y
+
+    for _ in range(n):
+        center = rg.Point(center_x, center_y)
+        circle = rg.Circle(center, radius)
+        circle.attach_to(window)
+        window.render(0.5)
+
+        center_x = center_x + (2 * radius)
+
+
+    # Is this right? Do they need to be the same circle (same color and
+        # thickness)?
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
