@@ -25,6 +25,7 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 #    on it, in class or via Piazza.
 ########################################################################
 
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -157,7 +158,7 @@ def problem1a(m, n):
       -- If m is 30 and n is 100, the correct answer is about 1.278.
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -166,6 +167,14 @@ def problem1a(m, n):
     #    TIME ESTIMATE:   10 minutes.
     # ------------------------------------------------------------------
 
+    total = 0
+    j = m ** 2
+
+    for _ in range((n ** 2) - j + 1):
+        total = total + math.sin(j)
+        j = j + 1
+
+    return total
 
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
