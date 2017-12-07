@@ -179,7 +179,7 @@ def problem1a(m, n):
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # DONE: 4. Implement this TEST function.
     #   It TESTS the  problem1b  function defined below.
     #   Include at least **   4   ** tests.
     # ------------------------------------------------------------------
@@ -192,6 +192,34 @@ def run_test_problem1b():
     print('--------------------------------------------------')
     print('Testing the   problem1b   function:')
     print('--------------------------------------------------')
+
+    # Test 1:
+    expected = 4  # This is APPROXIMATELY the correct answer.
+    answer = problem1b(5, 3)
+    print()
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 2:
+    expected = 6  # This is APPROXIMATELY the correct answer.
+    answer = problem1b(7, 4)
+    print()
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 4  # This is APPROXIMATELY the correct answer.
+    answer = problem1b(2, 5)
+    print()
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 4:
+    expected = 4  # This is APPROXIMATELY the correct answer.
+    answer = problem1b(10, 2)
+    print()
+    print('Test 4 expected:', expected)
+    print('       actual:  ', answer)
 
 
 def problem1b(m, f):
