@@ -171,6 +171,7 @@ def problem0a(n):
     else:
         return False
 
+
 def run_test_problem0b():
     """ Tests the   problem0b   function. """
     print()
@@ -243,6 +244,7 @@ def problem0b(n):
         number = number + 1
 
     return count
+
 
 def run_test_problem0c():
     """ Tests the   problem0c  function. """
