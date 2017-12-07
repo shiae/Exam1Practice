@@ -253,6 +253,14 @@ def problem1b(m, f):
     #    TIME ESTIMATE:   10 to 15 minutes.
     # ------------------------------------------------------------------
 
+    count = 0
+
+
+    for _ in range(m * f):
+        if is_prime(number) == True:
+            count = count + 1
+
+
 
 def run_test_problem1c():
     """ Tests the   problem1c   function. """
