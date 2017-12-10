@@ -364,9 +364,7 @@ def problem1c(n):
     product = 1
 
     for _ in range(n - 1):
-        # print(number)
         if is_prime(number):
-            # print(number)
             product = product * number
         number = number + 1
 
