@@ -158,21 +158,22 @@ def problem3a(window, point, n):
 
     start_x = point.x
     start_y = point.y
-    end_y = point.y + 50
-    end = rg.Point(start_x, end_y)
+
+    # end = rg.Point(start_x, end_y)
     start = rg.Point(start_x, start_y)
-    line = rg.Line(start, end)
+    # line = rg.Line(start, end)
     line.attach_to(window)
     line_thickness = line.thickness
 
     for _ in range(n):
-        start_x = start_x + 20
-        start_y = start_y + 10
+        line = rg.Line(start, end)
         start = rg.Point(start_x, start_y)
+        end_y = start_y + 50
         end = rg.Point(start_x, end_y)
         if line_thickness <= 13:
             line_thickness = line_thickness + 2
-        line = rg.Line(start, end)
+        start_x = start_x + 20
+        start_y = start_y + 10
         line.attach_to(window)
 
     window.render()
