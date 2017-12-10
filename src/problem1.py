@@ -239,7 +239,7 @@ def problem1b(m, f):
            since there are 44 primes between 5 and 200.
      """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     ####################################################################
@@ -256,10 +256,9 @@ def problem1b(m, f):
     count = 0
     number = m
 
-    for _ in range(m * f):
+    for _ in range((m * f) - m):
         if is_prime(number):
             count = count + 1
-            print(number)
         number = number + 1
 
     return count
