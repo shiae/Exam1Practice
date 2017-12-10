@@ -259,6 +259,7 @@ def problem1b(m, f):
     for _ in range(m * f):
         if is_prime(number):
             count = count + 1
+            print(number)
         number = number + 1
 
     return count
@@ -359,6 +360,8 @@ def problem1c(n):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 20 minutes.
     # ------------------------------------------------------------------
+
+
 
 
 # ----------------------------------------------------------------------
