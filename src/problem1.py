@@ -27,6 +27,7 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 
 import math
 
+
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_problem1a()
@@ -140,6 +141,7 @@ def run_test_problem1a():
     print('Test 4 expected:', expected, '(approximately)')
     print('       actual:  ', answer)
 
+
 def problem1a(m, n):
     """
     What comes in:  Integers m and n with abs(m) <= abs(n).
@@ -175,6 +177,7 @@ def problem1a(m, n):
         j = j + 1
 
     return total
+
 
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
@@ -262,6 +265,7 @@ def problem1b(m, f):
         number = number + 1
 
     return count
+
 
 def run_test_problem1c():
     """ Tests the   problem1c   function. """
@@ -374,4 +378,7 @@ def problem1c(n):
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
+
 main()
+
+
