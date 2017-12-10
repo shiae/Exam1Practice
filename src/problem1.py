@@ -254,13 +254,14 @@ def problem1b(m, f):
     # ------------------------------------------------------------------
 
     count = 0
-
+    number = m
 
     for _ in range(m * f):
-        if is_prime(number) == True:
+        if is_prime(number):
             count = count + 1
+        number = number + 1
 
-
+    return count
 
 def run_test_problem1c():
     """ Tests the   problem1c   function. """
