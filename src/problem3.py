@@ -180,6 +180,7 @@ def problem3a(window, point, n):
     window.render()
     return summation
 
+
 def run_test_problem3b():
     """ Tests the   problem3b   function. """
     # Test 1 is ALREADY DONE (here).
@@ -234,7 +235,7 @@ def problem3b(m, point1):
         :type point1: rg.Point
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
@@ -247,6 +248,20 @@ def problem3b(m, point1):
     #    DIFFICULTY:      8 or 9
     #    TIME ESTIMATE:   20 to 30 minutes.
     # ------------------------------------------------------------------
+
+    final_sum = 0
+    window = rg.RoseWindow(400, 650)
+    n = 3
+
+    for _ in range(m):
+        summation = problem3a(window, point1, n)
+        n = n + 2
+        point1.y = point1.y + 60
+        final_sum = final_sum + summation
+
+    window.render()
+    window.close_on_mouse_click()
+    return final_sum
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
