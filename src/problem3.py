@@ -147,7 +147,7 @@ def problem3a(window, point, n):
         :type n:      int
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -158,25 +158,27 @@ def problem3a(window, point, n):
 
     start_x = point.x
     start_y = point.y
-
-    # end = rg.Point(start_x, end_y)
-    start = rg.Point(start_x, start_y)
-    # line = rg.Line(start, end)
-    line.attach_to(window)
-    line_thickness = line.thickness
+    thickness = 1
+    summation = 0
 
     for _ in range(n):
-        line = rg.Line(start, end)
         start = rg.Point(start_x, start_y)
+        end_x = start_x
         end_y = start_y + 50
-        end = rg.Point(start_x, end_y)
-        if line_thickness <= 13:
-            line_thickness = line_thickness + 2
+        end = rg.Point(end_x, end_y)
+
+        line = rg.Line(start, end)
+        line.thickness = thickness
+        line.attach_to(window)
+        summation = summation + thickness
+
         start_x = start_x + 20
         start_y = start_y + 10
-        line.attach_to(window)
+        if thickness < 13:
+            thickness = thickness + 2
 
     window.render()
+    return summation
 
 def run_test_problem3b():
     """ Tests the   problem3b   function. """
